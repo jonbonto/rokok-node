@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  May Node and Express be with you.
+
+  <ul class="quotes">
+  <% for(var i=0; i<rokoks.length; i++) {%>
+    <li class="quote">
+      <span><%= rokoks[i].nama %></span>
+      <span><%= rokoks[i].harga %></span>
+	  <a href="/deleterokok/<%= rokoks[i]._id %>">X</a>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/rokoks" method="POST">
+    <input type="text" placeholder="nama" name="nama">
+    <input type="text" placeholder="harga" name="harga">
+    <button type="submit">Submit</button>
+  </form>
+  
+  Go back to <a href="/">Quotes</a>
+</body>
+</html>
